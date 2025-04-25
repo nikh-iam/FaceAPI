@@ -1,4 +1,4 @@
-## FaceServer  
+## FaceAPI
 [📄 View Documentation](https://docs.google.com/document/d/1K3CEjjBcdOEUCAMlSaeYWp8-r5Uyj-Q8hgMIiTWSH-4/edit?usp=sharing)  
 
 FaceServer is a real-time face recognition backend powered by FastAPI, supporting both HTTP and WebSocket protocols. It includes anti-spoofing and depth verification mechanisms, making it ideal for secure identity verification systems.
