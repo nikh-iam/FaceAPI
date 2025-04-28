@@ -3,10 +3,10 @@ import logging
 import logging.config
 from pathlib import Path
 
-# LOG_DIR = Path("logs")
-# LOG_DIR.mkdir(exist_ok=True)
+LOG_DIR = Path("logs")
+LOG_DIR.mkdir(exist_ok=True)
 
-# LOG_FILE = LOG_DIR / "app.log"
+LOG_FILE = LOG_DIR / "app.log"
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -16,9 +16,9 @@ LOGGING_CONFIG = {
         "standard": {
             "format": "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
         },
-        # "detailed": {
-        #     "format": "%(asctime)s | %(levelname)s | %(name)s | [%(filename)s:%(lineno)d] %(message)s"
-        # }
+        "detailed": {
+            "format": "%(asctime)s | %(levelname)s | %(name)s | [%(filename)s:%(lineno)d] %(message)s"
+        }
     },
 
     "handlers": {
@@ -27,14 +27,14 @@ LOGGING_CONFIG = {
             "formatter": "standard",
             "level": "DEBUG",
         },
-        # "file": {
-        #     "class": "logging.handlers.RotatingFileHandler",
-        #     "filename": str(LOG_FILE),
-        #     "maxBytes": 5 * 1024 * 1024,  # 5MB
-        #     "backupCount": 5,
-        #     "formatter": "detailed",
-        #     "level": "INFO",
-        # },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": str(LOG_FILE),
+            "maxBytes": 5 * 1024 * 1024,  # 5MB
+            "backupCount": 5,
+            "formatter": "detailed",
+            "level": "INFO",
+        },
     },
 
     "root": {
